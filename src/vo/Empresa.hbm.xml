@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/04/2015 20:30:48 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="vo.Empresa" table="empresa">
+        <id name="codempresa" type="integer">
+            <column name="codempresa" />
+            <generator class="identity" />
+        </id>
+        <property name="razao" type="string">
+            <column name="razao" length="250" not-null="true" />
+        </property>
+        <property name="logo" type="string">
+            <column name="logo" sql-type="text"/>
+        </property>
+        <property name="sitemorador" type="string">
+            <column name="sitemorador" sql-type="text" />
+        </property>               
+    </class>
+</hibernate-mapping>

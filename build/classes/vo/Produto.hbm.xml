@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/04/2015 20:30:48 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="vo.Produto" table="produto">
+        <id name="codproduto" type="java.lang.Integer">
+            <column name="codproduto" />
+            <generator class="identity" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" length="50" not-null="true" />
+        </property>
+        <property name="valor" type="double">
+            <column name="valor" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="quantidade" type="int">
+            <column name="quantidade" not-null="true" />
+        </property>
+        <property name="codempresa" type="integer">
+            <column name="codempresa" />
+        </property>
+    </class>
+</hibernate-mapping>

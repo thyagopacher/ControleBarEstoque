@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/04/2015 20:30:48 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="vo.Pessoa" table="pessoa">
+        <id name="codpessoa" type="integer">
+            <column name="codpessoa" />
+            <generator class="identity" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" length="250" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="250" not-null="true" />
+        </property>
+        <property name="telefone" type="string">
+            <column name="telefone" length="20" not-null="true" />
+        </property>
+        <property name="celular" type="string">
+            <column name="celular" length="20" not-null="true" />
+        </property>
+        <property name="senha" type="string">
+            <column name="senha" length="20" not-null="true" />
+        </property>
+        <property name="cpf" type="string">
+            <column name="cpf" length="15" not-null="true" />
+        </property>
+        <property name="rg" type="string">
+            <column name="rg" length="15" not-null="true" />
+        </property>
+
+        <property name="imagem" type="string">
+            <column name="imagem"  sql-type="text" />
+        </property>
+        <property name="dtcadastro" type="date">
+            <column name="dtcadastro" length="10" not-null="true" />
+        </property>
+        <property name="bloco" type="string">
+            <column name="bloco" length="10" not-null="true" />
+        </property>
+        <property name="apartamento" type="string">
+            <column name="apartamento" length="5" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="1" not-null="true" />
+        </property>
+        <property name="recebemsg" type="string">
+            <column name="recebemsg" length="1" not-null="true" />
+        </property>
+        <property name="respocorrencia" type="string">
+            <column name="respocorrencia" length="1" not-null="true" />
+        </property>
+        <property name="fazreserva" type="string">
+            <column name="fazreserva" length="1" not-null="true" />
+        </property>
+        <property name="morador" type="string">
+            <column name="morador" length="1" not-null="true" />
+        </property>
+        <property name="primeiroacesso" type="string">
+            <column name="primeiroacesso" length="1" not-null="true" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="1" not-null="true" />
+        </property>
+        <property name="dtnascimento" type="date">
+            <column name="dtnascimento" length="10" not-null="true" />
+        </property>
+        <property name="codparentesco" type="int">
+            <column name="codparentesco" not-null="true" />
+        </property>
+        <property name="aceitacopiaadm" type="string">
+            <column name="aceitacopiaadm" length="1" not-null="true" />
+        </property>
+        <property name="acessapainel" type="string">
+            <column name="acessapainel" length="1" not-null="true" />
+        </property>
+        <property name="liberaacesso" type="string">
+            <column name="liberaacesso" length="1" not-null="true" />
+        </property>
+        <property name="codcategoria" type="int">
+            <column name="codcategoria" not-null="true" />
+        </property>
+        <property name="codprofissao" type="int">
+            <column name="codprofissao" not-null="true" />
+        </property>
+        <many-to-one name="empresa" class="vo.Empresa" fetch="select">
+            <column name="codempresa" />
+        </many-to-one>          
+        <many-to-one name="nivel" class="vo.Nivel" fetch="select">
+            <column name="codnivel" />
+        </many-to-one>          
+    </class>
+</hibernate-mapping>

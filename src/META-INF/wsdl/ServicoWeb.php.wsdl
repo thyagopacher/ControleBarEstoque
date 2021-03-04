@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:server.GestaoCondominio" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:server.GestaoCondominio">
+<types>
+<xsd:schema targetNamespace="urn:server.GestaoCondominio"
+>
+ <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+ <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+</xsd:schema>
+</types>
+<message name="inserirItemPedidoRequest">
+  <part name="stringJson" type="xsd:string" /></message>
+<message name="inserirItemPedidoResponse">
+  <part name="retorno" type="xsd:int" /></message>
+<message name="atualizarItemPedidoRequest">
+  <part name="stringJson" type="xsd:string" /></message>
+<message name="atualizarItemPedidoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="excluirItemPedidoRequest">
+  <part name="stringJson" type="xsd:string" /></message>
+<message name="excluirItemPedidoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procurarItemPedidoRequest">
+  <part name="codpedido" type="xsd:int" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procurarItemPedidoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procurarItemCodigoPedidoRequest">
+  <part name="coditem" type="xsd:int" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procurarItemCodigoPedidoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="inserirPedidoRequest">
+  <part name="stringJson" type="xsd:string" /></message>
+<message name="inserirPedidoResponse">
+  <part name="retorno" type="xsd:int" /></message>
+<message name="atualizarPedidoRequest">
+  <part name="stringJson" type="xsd:string" /></message>
+<message name="atualizarPedidoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="excluirPedidoRequest">
+  <part name="stringJson" type="xsd:string" /></message>
+<message name="excluirPedidoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procurarPedidoRequest">
+  <part name="dtcadastro" type="xsd:string" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procurarPedidoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procurarPedidoStatusRequest">
+  <part name="codstatus" type="xsd:int" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procurarPedidoStatusResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procurarCodigoPedidoRequest">
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procurarCodigoPedidoResponse">
+  <part name="retorno" type="xsd:int" /></message>
+<message name="procurarLogoRequest">
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procurarLogoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="loginRequest">
+  <part name="email" type="xsd:string" />
+  <part name="senha" type="xsd:string" />
+  <part name="enderecoip" type="xsd:string" />
+  <part name="entrada" type="xsd:string" /></message>
+<message name="loginResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraBlocosRequest">
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraBlocosResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraApartamentosRequest">
+  <part name="bloco" type="xsd:string" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraApartamentosResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraApartamentos2Request">
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraApartamentos2Response">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraMoradorRequest">
+  <part name="bloco" type="xsd:string" />
+  <part name="apartamento" type="xsd:string" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraMoradorResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraMoradorEmpresaRequest">
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraMoradorEmpresaResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraMoradorCodigoRequest">
+  <part name="codempresa" type="xsd:int" />
+  <part name="codpessoa" type="xsd:int" /></message>
+<message name="procuraMoradorCodigoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraTipoPagamentoRequest">
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraTipoPagamentoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="inserirProdutoRequest">
+  <part name="nome" type="xsd:string" />
+  <part name="valor" type="xsd:string" />
+  <part name="codigobarra" type="xsd:string" />
+  <part name="quantidade" type="xsd:int" />
+  <part name="codempresa" type="xsd:int" />
+  <part name="status" type="xsd:string" /></message>
+<message name="inserirProdutoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="atualizarProdutoRequest">
+  <part name="nome" type="xsd:string" />
+  <part name="valor" type="xsd:string" />
+  <part name="codigobarra" type="xsd:string" />
+  <part name="quantidade" type="xsd:int" />
+  <part name="codempresa" type="xsd:int" />
+  <part name="codproduto" type="xsd:int" />
+  <part name="status" type="xsd:string" /></message>
+<message name="atualizarProdutoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="excluirProdutoRequest">
+  <part name="codproduto" type="xsd:int" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="excluirProdutoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraProdutoCodigoBarraRequest">
+  <part name="codigobarra" type="xsd:string" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraProdutoCodigoBarraResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraProdutosRequest">
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraProdutosResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<message name="procuraProdutoCodigoRequest">
+  <part name="codproduto" type="xsd:int" />
+  <part name="codempresa" type="xsd:int" /></message>
+<message name="procuraProdutoCodigoResponse">
+  <part name="retorno" type="xsd:string" /></message>
+<portType name="GestaoCondominioPortType">
+  <operation name="inserirItemPedido">
+    <documentation>inserir itens pedidos de ambientes não desktop para o ambiente web</documentation>
+    <input message="tns:inserirItemPedidoRequest"/>
+    <output message="tns:inserirItemPedidoResponse"/>
+  </operation>
+  <operation name="atualizarItemPedido">
+    <input message="tns:atualizarItemPedidoRequest"/>
+    <output message="tns:atualizarItemPedidoResponse"/>
+  </operation>
+  <operation name="excluirItemPedido">
+    <input message="tns:excluirItemPedidoRequest"/>
+    <output message="tns:excluirItemPedidoResponse"/>
+  </operation>
+  <operation name="procurarItemPedido">
+    <input message="tns:procurarItemPedidoRequest"/>
+    <output message="tns:procurarItemPedidoResponse"/>
+  </operation>
+  <operation name="procurarItemCodigoPedido">
+    <input message="tns:procurarItemCodigoPedidoRequest"/>
+    <output message="tns:procurarItemCodigoPedidoResponse"/>
+  </operation>
+  <operation name="inserirPedido">
+    <documentation>inserir pedidos de ambientes não desktop para o ambiente web</documentation>
+    <input message="tns:inserirPedidoRequest"/>
+    <output message="tns:inserirPedidoResponse"/>
+  </operation>
+  <operation name="atualizarPedido">
+    <input message="tns:atualizarPedidoRequest"/>
+    <output message="tns:atualizarPedidoResponse"/>
+  </operation>
+  <operation name="excluirPedido">
+    <input message="tns:excluirPedidoRequest"/>
+    <output message="tns:excluirPedidoResponse"/>
+  </operation>
+  <operation name="procurarPedido">
+    <input message="tns:procurarPedidoRequest"/>
+    <output message="tns:procurarPedidoResponse"/>
+  </operation>
+  <operation name="procurarPedidoStatus">
+    <input message="tns:procurarPedidoStatusRequest"/>
+    <output message="tns:procurarPedidoStatusResponse"/>
+  </operation>
+  <operation name="procurarCodigoPedido">
+    <input message="tns:procurarCodigoPedidoRequest"/>
+    <output message="tns:procurarCodigoPedidoResponse"/>
+  </operation>
+  <operation name="procurarLogo">
+    <input message="tns:procurarLogoRequest"/>
+    <output message="tns:procurarLogoResponse"/>
+  </operation>
+  <operation name="login">
+    <input message="tns:loginRequest"/>
+    <output message="tns:loginResponse"/>
+  </operation>
+  <operation name="procuraBlocos">
+    <input message="tns:procuraBlocosRequest"/>
+    <output message="tns:procuraBlocosResponse"/>
+  </operation>
+  <operation name="procuraApartamentos">
+    <input message="tns:procuraApartamentosRequest"/>
+    <output message="tns:procuraApartamentosResponse"/>
+  </operation>
+  <operation name="procuraApartamentos2">
+    <input message="tns:procuraApartamentos2Request"/>
+    <output message="tns:procuraApartamentos2Response"/>
+  </operation>
+  <operation name="procuraMorador">
+    <input message="tns:procuraMoradorRequest"/>
+    <output message="tns:procuraMoradorResponse"/>
+  </operation>
+  <operation name="procuraMoradorEmpresa">
+    <input message="tns:procuraMoradorEmpresaRequest"/>
+    <output message="tns:procuraMoradorEmpresaResponse"/>
+  </operation>
+  <operation name="procuraMoradorCodigo">
+    <input message="tns:procuraMoradorCodigoRequest"/>
+    <output message="tns:procuraMoradorCodigoResponse"/>
+  </operation>
+  <operation name="procuraTipoPagamento">
+    <input message="tns:procuraTipoPagamentoRequest"/>
+    <output message="tns:procuraTipoPagamentoResponse"/>
+  </operation>
+  <operation name="inserirProduto">
+    <input message="tns:inserirProdutoRequest"/>
+    <output message="tns:inserirProdutoResponse"/>
+  </operation>
+  <operation name="atualizarProduto">
+    <input message="tns:atualizarProdutoRequest"/>
+    <output message="tns:atualizarProdutoResponse"/>
+  </operation>
+  <operation name="excluirProduto">
+    <input message="tns:excluirProdutoRequest"/>
+    <output message="tns:excluirProdutoResponse"/>
+  </operation>
+  <operation name="procuraProdutoCodigoBarra">
+    <input message="tns:procuraProdutoCodigoBarraRequest"/>
+    <output message="tns:procuraProdutoCodigoBarraResponse"/>
+  </operation>
+  <operation name="procuraProdutos">
+    <input message="tns:procuraProdutosRequest"/>
+    <output message="tns:procuraProdutosResponse"/>
+  </operation>
+  <operation name="procuraProdutoCodigo">
+    <input message="tns:procuraProdutoCodigoRequest"/>
+    <output message="tns:procuraProdutoCodigoResponse"/>
+  </operation>
+</portType>
+<binding name="GestaoCondominioBinding" type="tns:GestaoCondominioPortType">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="inserirItemPedido">
+    <soap:operation soapAction="inserirItemPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="atualizarItemPedido">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/atualizarItemPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="excluirItemPedido">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/excluirItemPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procurarItemPedido">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procurarItemPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procurarItemCodigoPedido">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procurarItemCodigoPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="inserirPedido">
+    <soap:operation soapAction="inserirPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="atualizarPedido">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/atualizarPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="excluirPedido">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/excluirPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procurarPedido">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procurarPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procurarPedidoStatus">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procurarPedidoStatus" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procurarCodigoPedido">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procurarCodigoPedido" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procurarLogo">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procurarLogo" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="login">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/login" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraBlocos">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraBlocos" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraApartamentos">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraApartamentos" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraApartamentos2">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraApartamentos2" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraMorador">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraMorador" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraMoradorEmpresa">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraMoradorEmpresa" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraMoradorCodigo">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraMoradorCodigo" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraTipoPagamento">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraTipoPagamento" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="inserirProduto">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/inserirProduto" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="atualizarProduto">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/atualizarProduto" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="excluirProduto">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/excluirProduto" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraProdutoCodigoBarra">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraProdutoCodigoBarra" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraProdutos">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraProdutos" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="procuraProdutoCodigo">
+    <soap:operation soapAction="http://gestccon.com.br/sistema/control/ServicoWeb.php/procuraProdutoCodigo" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.GestaoCondominio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+</binding>
+<service name="GestaoCondominio">
+  <port name="GestaoCondominioPort" binding="tns:GestaoCondominioBinding">
+    <soap:address location="http://gestccon.com.br/sistema/control/ServicoWeb.php"/>
+  </port>
+</service>
+</definitions>

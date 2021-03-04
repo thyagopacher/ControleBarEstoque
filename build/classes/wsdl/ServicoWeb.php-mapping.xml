@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<java-wsdl-mapping xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee    http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd">
+  <package-mapping>
+    <package-type>servico_web</package-type>
+    <namespaceURI>urn:server.GestaoCondominio</namespaceURI>
+  </package-mapping>
+  <service-interface-mapping>
+    <service-interface>servico_web.GestaoCondominio</service-interface>
+    <wsdl-service-name xmlns:serviceNS="urn:server.GestaoCondominio">serviceNS:GestaoCondominio</wsdl-service-name>
+    <port-mapping>
+      <port-name>GestaoCondominioPort</port-name>
+      <java-port-name>GestaoCondominioPort</java-port-name>
+    </port-mapping>
+  </service-interface-mapping>
+  <service-endpoint-interface-mapping>
+    <service-endpoint-interface>servico_web.GestaoCondominioPortType</service-endpoint-interface>
+    <wsdl-port-type xmlns:portTypeNS="urn:server.GestaoCondominio">portTypeNS:GestaoCondominioPortType</wsdl-port-type>
+    <wsdl-binding xmlns:bindingNS="urn:server.GestaoCondominio">bindingNS:GestaoCondominioBinding</wsdl-binding>
+    <service-endpoint-method-mapping>
+      <java-method-name>inserirItemPedido</java-method-name>
+      <wsdl-operation>inserirItemPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirItemPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>stringJson</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>int</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirItemPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>atualizarItemPedido</java-method-name>
+      <wsdl-operation>atualizarItemPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarItemPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>stringJson</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarItemPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>excluirItemPedido</java-method-name>
+      <wsdl-operation>excluirItemPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:excluirItemPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>stringJson</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:excluirItemPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procurarItemPedido</java-method-name>
+      <wsdl-operation>procurarItemPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarItemPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>codpedido</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarItemPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarItemPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procurarItemCodigoPedido</java-method-name>
+      <wsdl-operation>procurarItemCodigoPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarItemCodigoPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>coditem</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarItemCodigoPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarItemCodigoPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>inserirPedido</java-method-name>
+      <wsdl-operation>inserirPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>stringJson</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>int</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>atualizarPedido</java-method-name>
+      <wsdl-operation>atualizarPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>stringJson</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>excluirPedido</java-method-name>
+      <wsdl-operation>excluirPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:excluirPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>stringJson</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:excluirPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procurarPedido</java-method-name>
+      <wsdl-operation>procurarPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>dtcadastro</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procurarPedidoStatus</java-method-name>
+      <wsdl-operation>procurarPedidoStatus</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarPedidoStatusRequest</wsdl-message>
+          <wsdl-message-part-name>codstatus</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarPedidoStatusRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarPedidoStatusResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procurarCodigoPedido</java-method-name>
+      <wsdl-operation>procurarCodigoPedido</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarCodigoPedidoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>int</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarCodigoPedidoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procurarLogo</java-method-name>
+      <wsdl-operation>procurarLogo</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarLogoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procurarLogoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>login</java-method-name>
+      <wsdl-operation>login</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:loginRequest</wsdl-message>
+          <wsdl-message-part-name>email</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:loginRequest</wsdl-message>
+          <wsdl-message-part-name>senha</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>2</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:loginRequest</wsdl-message>
+          <wsdl-message-part-name>enderecoip</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>3</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:loginRequest</wsdl-message>
+          <wsdl-message-part-name>entrada</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:loginResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraBlocos</java-method-name>
+      <wsdl-operation>procuraBlocos</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraBlocosRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraBlocosResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraApartamentos</java-method-name>
+      <wsdl-operation>procuraApartamentos</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraApartamentosRequest</wsdl-message>
+          <wsdl-message-part-name>bloco</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraApartamentosRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraApartamentosResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraApartamentos2</java-method-name>
+      <wsdl-operation>procuraApartamentos2</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraApartamentos2Request</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraApartamentos2Response</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraMorador</java-method-name>
+      <wsdl-operation>procuraMorador</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorRequest</wsdl-message>
+          <wsdl-message-part-name>bloco</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorRequest</wsdl-message>
+          <wsdl-message-part-name>apartamento</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>2</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraMoradorEmpresa</java-method-name>
+      <wsdl-operation>procuraMoradorEmpresa</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorEmpresaRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorEmpresaResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraMoradorCodigo</java-method-name>
+      <wsdl-operation>procuraMoradorCodigo</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorCodigoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorCodigoRequest</wsdl-message>
+          <wsdl-message-part-name>codpessoa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraMoradorCodigoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraTipoPagamento</java-method-name>
+      <wsdl-operation>procuraTipoPagamento</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraTipoPagamentoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraTipoPagamentoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>inserirProduto</java-method-name>
+      <wsdl-operation>inserirProduto</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>nome</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>valor</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>2</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>codigobarra</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>3</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>quantidade</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>4</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>5</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>status</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:inserirProdutoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>atualizarProduto</java-method-name>
+      <wsdl-operation>atualizarProduto</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>nome</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>valor</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>2</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>codigobarra</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>3</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>quantidade</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>4</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>5</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>codproduto</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>6</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>status</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:atualizarProdutoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>excluirProduto</java-method-name>
+      <wsdl-operation>excluirProduto</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:excluirProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>codproduto</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:excluirProdutoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:excluirProdutoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraProdutoCodigoBarra</java-method-name>
+      <wsdl-operation>procuraProdutoCodigoBarra</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>java.lang.String</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraProdutoCodigoBarraRequest</wsdl-message>
+          <wsdl-message-part-name>codigobarra</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraProdutoCodigoBarraRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraProdutoCodigoBarraResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraProdutos</java-method-name>
+      <wsdl-operation>procuraProdutos</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraProdutosRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraProdutosResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+    <service-endpoint-method-mapping>
+      <java-method-name>procuraProdutoCodigo</java-method-name>
+      <wsdl-operation>procuraProdutoCodigo</wsdl-operation>
+      <method-param-parts-mapping>
+        <param-position>0</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraProdutoCodigoRequest</wsdl-message>
+          <wsdl-message-part-name>codproduto</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <method-param-parts-mapping>
+        <param-position>1</param-position>
+        <param-type>int</param-type>
+        <wsdl-message-mapping>
+          <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraProdutoCodigoRequest</wsdl-message>
+          <wsdl-message-part-name>codempresa</wsdl-message-part-name>
+          <parameter-mode>IN</parameter-mode>
+        </wsdl-message-mapping>
+      </method-param-parts-mapping>
+      <wsdl-return-value-mapping>
+        <method-return-value>java.lang.String</method-return-value>
+        <wsdl-message xmlns:wsdlMsgNS="urn:server.GestaoCondominio">wsdlMsgNS:procuraProdutoCodigoResponse</wsdl-message>
+        <wsdl-message-part-name>retorno</wsdl-message-part-name>
+      </wsdl-return-value-mapping>
+    </service-endpoint-method-mapping>
+  </service-endpoint-interface-mapping>
+</java-wsdl-mapping>
